@@ -1,0 +1,9 @@
+# Native call results recorded in one offline replay of plutonium::main's prefix (VM-A outer ops 51-484).
+# Values are hex. time64 is the low dword of _time64(NULL); the run used a fixed clock.
+time64      6553F102
+tick        000008D9
+pid         00002F64
+# Recorded outputs, used only to check the replay.
+srand_seed  9B0F4539
+rand1       00000D06
+rand2       00000AEC
