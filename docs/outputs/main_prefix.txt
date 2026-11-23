@@ -1,0 +1,16 @@
+replay with recorded native results (main_prefix_natives.txt)
+  _time64             0x6553F102
+  GetTickCount        0x000008D9
+  GetCurrentProcessId 0x00002F64
+  ~(tick * pid)       0xFE5CB43B
+  srand seed          0x9B0F4539  recorded 0x9B0F4539  MATCH
+  rand() #1           0x0D06      recorded 0x0D06      MATCH
+  q1 = r1 / 426315782  = 0
+  rand() #2           0x0AEC      recorded 0x0AEC      MATCH
+  q2 = r2 / 412255378  = 0
+
+why q1 = q2 = 0 always: 0 <= rand() <= 0x7FFF = 32767, divisors 0x19691006 and 0x18928492 (13010x and 12581x larger)
+random inputs (t, tick, pid) x 1,000,000: nonzero quotients 0, max rand() 0x7FFF
+all 2^32 seeds:                         nonzero quotients 0, max rand() 0x7FFF
+
+result  MATCH, quotients constant 0

@@ -1,0 +1,14 @@
+Stage-0 cross-check: C++ aplib_depack vs the Python reference unpacker (aPLib decoder + emulated stage-0 code)
+
+python unpack_stage0.py
+  methods_agree        True
+  packed consumed      10077260
+  depacked length      18227200
+  .themida sha256      826d7af65dcb00ba160cd06abfa0503f84b51638479523af7c528cfb80e3f9f2
+
+integrity_hash --dump-stage1 cpp-themida-stage1.bin
+  packed consumed      10077260
+  .themida sha256      826d7af65dcb00ba160cd06abfa0503f84b51638479523af7c528cfb80e3f9f2
+
+cmp cpp-themida-stage1.bin themida-stage1.bin
+  identical (18227200 bytes)

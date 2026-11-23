@@ -1,0 +1,17 @@
+input            plutonium-bootstrapper-win32.exe
+input sha256     6c405bec03a89b8d954d8ae5edea1bed89b4147f53e4dbe68ced6ef5a815a96b (r5354)
+stage-0 blob     0x140D91EF in .boot, 10077260 packed bytes consumed
+depacked         18227200 bytes -> .themida 0x12F77000 (virtual size 0x1162000)
+.themida sha256  826d7af65dcb00ba160cd06abfa0503f84b51638479523af7c528cfb80e3f9f2 (matches the Python reference unpacker)
+
+stored checksum  [0x13B949BB] = 0x8A6116A2
+hashed range     .main 0x12934000, 0x623000 bytes (file offset 0x264C00, raw size 0x623000, virtual size 0x622F64, relocations: none)
+computed         0x8A6116A2   h = rol32(h + d, 16) ^ d over 1608704 dwords, h0 = 0
+result           MATCH
+
+one-bit changes in a private copy of .main (file untouched):
+  .main+0x000000 ^= 0x01  -> 0x145F4F30  MISMATCH
+  .main+0x001000 ^= 0x01  -> 0xB923640C  MISMATCH
+  .main+0x31B7A2 ^= 0x01  -> 0xEA4B8822  MISMATCH
+  .main+0x622FFF ^= 0x01  -> 0x8B6117A2  MISMATCH
+  restored copy          -> 0x8A6116A2  MATCH

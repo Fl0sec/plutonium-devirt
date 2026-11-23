@@ -1,0 +1,7 @@
+input sha256  6c405bec03a89b8d954d8ae5edea1bed89b4147f53e4dbe68ced6ef5a815a96b (r5354)
+
+VM  context     table       handlers  distinct bodies  expected  result
+A   0x12FBF0E0  0x1302A7E0       847              847       847  MATCH
+B   0x130483F3  0x132671D4      1494             1494      1494  MATCH
+C   0x1326C1AB  0x134075E7      1322             1322      1322  MATCH
+D   0x13239763  0x1344F7C8       498              498       498  MATCH

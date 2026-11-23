@@ -1,0 +1,30 @@
+input sha256  6c405bec03a89b8d954d8ae5edea1bed89b4147f53e4dbe68ced6ef5a815a96b (r5354)
+dataset       vmd_vjcc_observed.csv, 321 rows
+
+condition map vs x86 Jcc semantics: 16 codes x 32 flag combinations, 0 disagreements
+
+recorded vmd_078 executions   496110 at 241 distinct VIPs
+operand decode (code, slot)   0 mismatches
+successor VIPs (both arms)    0 mismatches
+taken outcome vs handler      0 mismatches
+successor handler indices     0 outside the 498-entry table
+
+code  x86   predicate          executions    taken  flag words  source
+0x02  je    ZF                     439550   180049          10  trace + disassembly
+0x8D  jne   !ZF                      7788     7360          14  trace + disassembly
+0x20  ja    !ZF && !CF                  -        -           -  disassembly only
+0x12  jae   !CF                        11        4           4  trace + disassembly
+0x32  jb    CF                      47650        1           5  trace + disassembly
+0x34  jbe   ZF || CF                 1111     1110           2  trace + disassembly
+0x91  jg    !ZF && SF == OF             -        -           -  disassembly only
+0x44  jge   SF == OF                    -        -           -  disassembly only
+0xAD  jl    SF != OF                    -        -           -  disassembly only
+0x67  jle   ZF || SF != OF              -        -           -  disassembly only
+0xD2  jno   !OF                         -        -           -  disassembly only
+0x82  jo    OF                          -        -           -  disassembly only
+0x13  jnp   !PF                         -        -           -  disassembly only
+0x1E  jp    PF                          -        -           -  disassembly only
+0xDE  jns   !SF                         -        -           -  disassembly only
+0x2F  js    SF                          -        -           -  disassembly only
+
+result  0 mismatches
