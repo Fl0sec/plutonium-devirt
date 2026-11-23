@@ -1,6 +1,6 @@
 # plutonium-devirt
 
-Companion code for the write-up on the Themida-protected Plutonium bootstrapper r5354 (BO2 community client).
+Companion code for [Inside the Plutonium Bootstrapper: Four Themida VMs and a Silent Integrity Check](https://www.fl0sec.com/research/plutonium-bootstrapper-themida), a write-up on the Themida-protected Plutonium bootstrapper r5354.
 Each program turns one finding into a small check you can run yourself. Everything is static parsing of the
 file or replay of recorded numbers; nothing loads, runs or attaches to the target.
 
